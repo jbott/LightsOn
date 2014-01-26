@@ -79,6 +79,9 @@ ${COMPILER}:
 # Rules for building the ${NAME} example.
 #
 CFLAGSgcc=-DTARGET_IS_BLIZZARD_RA1
+ifeq (${DEBUG_FLAG},true)
+CFLAGSgcc+=-DDEBUG_FLAG
+endif
 ${COMPILER}/${NAME}.axf: ${COMPILER}/startup_${COMPILER}.o
 # Compile the UART standard io libary to allow for debugging
 ${COMPILER}/${NAME}.axf: ${COMPILER}/uartstdio.o

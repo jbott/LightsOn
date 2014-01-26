@@ -15,6 +15,11 @@
 #include "driverlib/sysctl.h"
 #include "utils/uartstdio.h"
 
+#ifdef DEBUG_FLAG
+#define D(call) call
+#else
+#define D(call)
+#endif
 
 // Define LED Pins
 #define RED_LED     GPIO_PIN_1
@@ -66,6 +71,7 @@ int main() {
     UARTprintf("Lets get this party started!\n");
 
     while (++color) {
+        D(UARTprintf("Color: %u\n", color - 1));
         GPIOPinWrite(GPIO_PORTF_BASE, RED_LED|BLUE_LED|GREEN_LED, colors[color - 1]);
 
         // Reset after looping through all of them
