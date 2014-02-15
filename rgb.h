@@ -52,21 +52,18 @@
 //
 // Ratio for percent of full on that should be "true" white.
 //
-//#define RED_WHITE_BALANCE        0.497f
-//#define GREEN_WHITE_BALANCE      0.6f
-//#define BLUE_WHITE_BALANCE       1.0f
-#define RED_WHITE_BALANCE        1.0f
-#define GREEN_WHITE_BALANCE      1.0f
+#define RED_WHITE_BALANCE        0.497f
+#define GREEN_WHITE_BALANCE      0.6f
 #define BLUE_WHITE_BALANCE       1.0f
 
 //
 // GPIO, Timer, Peripheral, and Pin assignments for the colors
 //
-#define RED_GPIO_PERIPH         SYSCTL_PERIPH_GPIOE
+#define RED_GPIO_PERIPH         SYSCTL_PERIPH_GPIOF
 #define RED_TIMER_PERIPH        SYSCTL_PERIPH_TIMER0
-#define BLUE_GPIO_PERIPH        SYSCTL_PERIPH_GPIOE
+#define BLUE_GPIO_PERIPH        SYSCTL_PERIPH_GPIOF
 #define BLUE_TIMER_PERIPH       SYSCTL_PERIPH_TIMER1
-#define GREEN_GPIO_PERIPH       SYSCTL_PERIPH_GPIOE
+#define GREEN_GPIO_PERIPH       SYSCTL_PERIPH_GPIOF
 #define GREEN_TIMER_PERIPH      SYSCTL_PERIPH_TIMER1
 
 
