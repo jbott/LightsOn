@@ -85,6 +85,7 @@ endif
 ${COMPILER}/${NAME}.axf: ${COMPILER}/startup_${COMPILER}.o
 # Compile the UART standard io libary to allow for debugging
 ${COMPILER}/${NAME}.axf: ${COMPILER}/uartstdio.o
+${COMPILER}/${NAME}.axf: ${COMPILER}/rgb.o
 ${COMPILER}/${NAME}.axf: ${COMPILER}/${NAME}.o
 ${COMPILER}/${NAME}.axf: ${ROOT}/driverlib/${COMPILER}-cm4f/libdriver-cm4f.a
 ${COMPILER}/${NAME}.axf: ${NAME}.ld
