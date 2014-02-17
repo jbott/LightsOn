@@ -42,12 +42,15 @@ static void IntDefaultHandler(void);
 //*****************************************************************************
 extern int main(void);
 
+// Interrupts
+extern void SysTickIntHandler(void);
+
 //*****************************************************************************
 //
 // Reserve space for the system stack.
 //
 //*****************************************************************************
-static unsigned long pulStack[64];
+static unsigned long pulStack[512];
 
 //*****************************************************************************
 //
@@ -74,7 +77,7 @@ void (* const g_pfnVectors[])(void) =
     IntDefaultHandler,                      // Debug monitor handler
     0,                                      // Reserved
     IntDefaultHandler,                      // The PendSV handler
-    IntDefaultHandler,                      // The SysTick handler
+    SysTickIntHandler,                      // The SysTick handler
     IntDefaultHandler,                      // GPIO Port A
     IntDefaultHandler,                      // GPIO Port B
     IntDefaultHandler,                      // GPIO Port C
